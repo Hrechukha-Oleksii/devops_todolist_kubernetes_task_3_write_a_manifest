@@ -45,7 +45,7 @@ metadata:
  name: todoapp
 ```
 8. Create a pod `manifest` that will start a `ikulyk404/busyboxplus:curl` container in a cluster. The file should be named `busybox.yml`.
-1. Create a pod `manifest` that will use a previously created image with the tag `hrechukhao/todoapp:3.0.0`. The file should be named `todoapp-pod.yml`.
+1. Create a pod `manifest` that will use a previously created image with the tag `{yourname}/todoapp:3.0.0`. The file should be named `todoapp-pod.yml`.
 1. ToDo app pod `manifest` should have a readiness probe configured
 1. ToDo app pod `manifest` should have a liveness probe configured
 1. Create the `INSTRUCTION.md` file
