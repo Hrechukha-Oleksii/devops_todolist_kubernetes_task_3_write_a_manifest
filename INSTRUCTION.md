@@ -38,14 +38,6 @@ Create Todoapp pod from todoapp-pod.yml manifest:
 
 5. How to test the application using the `busyboxplus:curl` container.
 
-Check ip all of pods in the namespace:
+Use dynamic IP retrieval in powershell terminal for test the app:
 
-    kubectl get pods -n todoapp -o wide
-
-Connect to busyboxplus container terminal:
-    
-    kubectl -n todoapp exec -it busyboxplus -- sh
-
-Run curl command with todoapp-pod ip:
-
-    curl 10.1.0.54
+    kubectl exec -n todoapp busyboxplus -- curl "$(kubectl get pods -n todoapp -o jsonpath='{.items[?(@.metadata.name==\"todoapp-pod\")].status.podIP}'):8080"
